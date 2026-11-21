@@ -1,0 +1,16 @@
+#pragma once 
+
+#include "AForm.hpp"
+#include <fstream>
+
+class ShrubberyCreationForm : public AForm{
+    private :
+        std::string _target;
+    public : 
+        ShrubberyCreationForm(const std::string &target);
+        ~ShrubberyCreationForm();
+        ShrubberyCreationForm(const ShrubberyCreationForm &copy);
+        ShrubberyCreationForm& operator=(const ShrubberyCreationForm &target);
+
+        void execute(const Bureaucrat& executor) const;
+};
